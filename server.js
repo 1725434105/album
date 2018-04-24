@@ -14,6 +14,8 @@ app.use(express.static('./public'))
 app.use(express.static('./uploads'))
 app.get('/',router.showIndex)
 
+app.get('/up', router.showUp)
+app.post('/up', router.doPost)
 app.get('/:album', router.showAlbum)
 app.use(function(req, res){
   console.log(req.url)
